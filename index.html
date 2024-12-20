@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title style="color: #fc9551;̥">Object Detection with Auditory alerts</title>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A web app designed for real-time object detection with auditory alerts for visually impaired individuals.">
+  
+    <link rel="stylesheet" href="style.css">
+  </head>  
+  <body>
+   <header>
+   <nav>
+      <ul class="navbar">
+         <li><a href="index.html">Home</a></li>
+         <li><a href="about.html">About Us</a></li>
+      </ul>
+   </nav>
+ 
+  </header>
+       <h1>Object Detection with Auditory Alerts</h1>
+    
+    <p>Wait for the model to load before clicking the button to enable the webcam - at which point it will become visible to use.</p>
+
+
+    <section id="demos" class="invisible">
+
+      <p> When ready click "enable webcam" below and accept access to the webcam when the browser asks (check the top left of your window</p>
+      <p>For visually impaired individuals: Voice instructions are available. Use commands like "enable camera," "disable camera," or "change camera."</p>
+      <p>To switch between front and back camera on mobile phone, you can click on switch camera button</p>
+              <button id="webcamButton" aria-label="Enable Webcam" role="button">Enable Webcam</button>
+        <button id="stopButton" aria-label="Stop Webcam" role="button">Stop Webcam</button>
+      <button id="switchCamera" aria-label="Switch Webcam" role="button">Switch Camera</button>
+      <div id="liveView" class="camView">
+        <video id="webcam" autoplay muted width="640" height="480"></video>
+      </div>
+    </section>
+  <footer>
+    <p>Developed for accessibility. Use voice commands to interact with the webcam functions.</p>
+  </footer>
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+    <!-- Load the coco-ssd model to use to recognize things in images -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+    
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
